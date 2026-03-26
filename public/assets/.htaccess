@@ -2,9 +2,13 @@
 <IfModule mod_mime.c>
   AddType application/javascript .js
   AddType application/javascript .mjs
+  AddType text/css .css
 </IfModule>
 <IfModule mod_headers.c>
   <FilesMatch "\.(js|mjs)$">
     Header set Content-Type "application/javascript; charset=utf-8"
+  </FilesMatch>
+  <FilesMatch "\.css$">
+    Header set Content-Type "text/css; charset=utf-8"
   </FilesMatch>
 </IfModule>
