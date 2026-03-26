@@ -198,6 +198,8 @@ const Footer = () => {
                             <a href="#terms">{t('footer.terms')}</a>
                             <span className="footer-separator">•</span>
                             <a href="#mentions">{t('footer.legal')}</a>
+                            <span className="footer-separator">•</span>
+                            <a href="/sitemap.xml">{t('footer.sitemap')}</a>
                         </div>
                     </div>
                     <div className="footer-developers">

@@ -8,6 +8,12 @@
 # Charset in HTTP response (fixes "charset encoding missing in HTTP header")
 AddDefaultCharset UTF-8
 
+# Some hosts serve .js as text/plain; ES modules require a JavaScript MIME type
+<IfModule mod_mime.c>
+  AddType application/javascript .js
+  AddType application/javascript .mjs
+</IfModule>
+
 RewriteEngine On
 RewriteBase /
 
