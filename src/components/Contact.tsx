@@ -51,7 +51,7 @@ const Contact = () => {
 
         setStatus('submitting');
 
-        const whatsappNumber = '212762728706';
+        const whatsappNumber = '212674545939';
         let message = t('contact.form.whatsappMessage');
         message = message
             .replace('{name}', formData.name)
@@ -122,17 +122,17 @@ const Contact = () => {
             id: 1,
             icon: Phone,
             title: t('contact.info.phone.title'),
-            value: '+212 7 62 72 87 06',
+            value: '+212 6 745 459 39',
             subtitle: t('contact.info.phone.subtitle'),
-            link: 'tel:+212762728706',
+            link: 'tel:+212674545939',
         },
         {
             id: 2,
             icon: MessageSquare,
             title: t('contact.info.whatsapp.title'),
-            value: '+212 7 62 72 87 06',
+            value: '+212 6 745 459 39',
             subtitle: t('contact.info.whatsapp.subtitle'),
-            link: 'https://wa.me/212762728706',
+            link: 'https://wa.me/212674545939',
         },
         {
             id: 3,

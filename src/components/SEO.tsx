@@ -80,7 +80,7 @@ const SEO = () => {
                 ? 'خدمة نقل فاخر في المغرب منذ 2009. سائق خاص، مرسيدس وبي إم دبليو. نقل المطار، النقل السياحي. الدار البيضاء، مراكش، الرباط. 24/7.'
                 : 'Services de transport de luxe au Maroc depuis 2009. Chauffeur privé, Mercedes & BMW. Transferts aéroport, transport touristique. Casablanca, Marrakech, Rabat. 24/7.',
         url: 'https://em-taxi.com',
-        telephone: '+212762728706',
+        telephone: '+212674545939',
         email: 'em.taxi.maroc@gmail.com',
         address: {
             '@type': 'PostalAddress',
