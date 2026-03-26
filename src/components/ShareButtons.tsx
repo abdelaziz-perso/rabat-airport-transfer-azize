@@ -17,7 +17,7 @@ export default function ShareButtons({ className = '' }: { className?: string })
     const { t } = useLanguage();
     const [copied, setCopied] = useState(false);
 
-    const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://em-taxi.com/';
+    const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://taxirabatairoport.com/';
     const shareText = SHARE_TEXT;
 
     const handleCopyLink = useCallback(async () => {

@@ -75,20 +75,20 @@ Every page must include these essential meta tags:
 #### Open Graph (Social Media)
 ```html
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://em-taxi.com/" />
+<meta property="og:url" content="https://taxirabatairoport.com/" />
   <meta property="og:title" content="[Page Title]" />
   <meta property="og:description" content="[Description]" />
-  <meta property="og:image" content="http://em-taxi.com/logo.png" />
+  <meta property="og:image" content="https://taxirabatairoport.com/logo.png" />
 <meta property="og:locale" content="fr_FR" />
 ```
 
 #### Twitter Cards
 ```html
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="http://em-taxi.com/" />
+<meta property="twitter:url" content="https://taxirabatairoport.com/" />
   <meta property="twitter:title" content="[Page Title]" />
   <meta property="twitter:description" content="[Description]" />
-  <meta property="twitter:image" content="http://em-taxi.com/logo.png" />
+  <meta property="twitter:image" content="https://taxirabatairoport.com/logo.png" />
 ```
 
 ### Language-Specific Meta Tags
@@ -364,10 +364,10 @@ The site supports three languages with proper SEO for each:
 For future multi-language pages, implement hreflang:
 
 ```html
-<link rel="alternate" hreflang="fr" href="http://em-taxi.com/?lang=fr" />
-<link rel="alternate" hreflang="en" href="http://em-taxi.com/?lang=en" />
-<link rel="alternate" hreflang="ar" href="http://em-taxi.com/?lang=ar" />
-<link rel="alternate" hreflang="x-default" href="http://em-taxi.com/" />
+<link rel="alternate" hreflang="fr" href="https://taxirabatairoport.com/?lang=fr" />
+<link rel="alternate" hreflang="en" href="https://taxirabatairoport.com/?lang=en" />
+<link rel="alternate" hreflang="ar" href="https://taxirabatairoport.com/?lang=ar" />
+<link rel="alternate" hreflang="x-default" href="https://taxirabatairoport.com/" />
 ```
 
 ### Translation Files
@@ -498,7 +498,7 @@ Before deploying changes, verify:
 
 #### If you use **Cloudflare**
 
-1. Go to **Cloudflare Dashboard** → your domain (e.g. em-taxi.com).
+1. Go to **Cloudflare Dashboard** → your domain (e.g. taxirabatairoport.com).
 2. **Security** → **Bots**.
 3. Ensure:
    - **Verified Bots** = **Allowed** (Googlebot, Bingbot, Applebot, etc.).
@@ -512,7 +512,7 @@ Before deploying changes, verify:
 
 #### If you use **Hostinger**
 
-1. Connecte-toi à **hPanel** (panel Hostinger) et sélectionne ton hébergement pour **em-taxi.com**.
+1. Connecte-toi à **hPanel** (panel Hostinger) et sélectionne ton hébergement pour **taxirabatairoport.com**.
 2. **Performance → CDN** (si tu utilises le CDN Hostinger)  
    - Va dans **AI Audit** (ou réglages des crawlers/bots).  
    - **Ne bloque pas** Googlebot, Bingbot ni les crawlers de moteurs de recherche.  
@@ -580,19 +580,19 @@ The project already has a `public/robots.txt` that **allows** all crawlers and e
 
 | Cause | What to do |
 |-------|------------|
-| **HTTP → HTTPS** or **www → non-www** (301) | **Expected.** This site redirects `http://em-taxi.com`, `https://www.em-taxi.com` to the canonical `https://em-taxi.com/`. Search Console lists those *redirecting* URLs as "Page with redirect" (not indexed); the **destination** URL is what gets indexed. No fix needed. |
-| **Sitemap listed only canonical** | The sitemap should list only `https://em-taxi.com/` (and language variants). Do not submit `http://` or `www` URLs in the sitemap so Google discovers the canonical first. |
-| **Trailing slash** | If your host redirects `em-taxi.com` ↔ `em-taxi.com/`, one will show as redirect. Stick to one (this site uses `https://em-taxi.com/` with trailing slash in canonical). |
+| **HTTP → HTTPS** or **www → non-www** (301) | **Expected.** This site redirects `http://taxirabatairoport.com`, `https://www.taxirabatairoport.com` to the canonical `https://taxirabatairoport.com/`. Search Console lists those *redirecting* URLs as "Page with redirect" (not indexed); the **destination** URL is what gets indexed. No fix needed. |
+| **Sitemap listed only canonical** | The sitemap should list only `https://taxirabatairoport.com/` (and language variants). Do not submit `http://` or `www` URLs in the sitemap so Google discovers the canonical first. |
+| **Trailing slash** | If your host redirects `taxirabatairoport.com` ↔ `taxirabatairoport.com/`, one will show as redirect. Stick to one (this site uses `https://taxirabatairoport.com/` with trailing slash in canonical). |
 
 ### 5. Google chose not to index (quality / duplicate)
 
 | Cause | What to do |
 |-------|------------|
 | **Crawled – currently not indexed** | Usually quality or low priority. Improve content, internal links, and ensure the page is useful and unique. Request indexing after fixes. |
-| **Duplicate content** | Use a single **canonical** URL (this site uses `https://em-taxi.com/`). Avoid duplicate titles/descriptions across URLs. |
+| **Duplicate content** | Use a single **canonical** URL (this site uses `https://taxirabatairoport.com/`). Avoid duplicate titles/descriptions across URLs. |
 | **Thin or low-value content** | Add clear, useful content and a clear purpose for the page. |
 
-### 6. Single-page app (SPA) specifics (em-taxi.com)
+### 6. Single-page app (SPA) specifics (taxirabatairoport.com)
 
 - **One main URL:** The site is a SPA; the main indexable URL is the homepage. Ensure **index.html** is served for `/` and that the server sends the same HTML for client-side routes (SPA fallback) so crawlers get the app.
 - **Sitemap:** `public/sitemap.xml` should list the main URL(s). Submit it in Search Console → Sitemaps.
@@ -600,7 +600,7 @@ The project already has a `public/robots.txt` that **allows** all crawlers and e
 
 ### Checklist: "My page isn't indexed"
 
-1. [ ] **Search Console** – Property added for `https://em-taxi.com` (or exact URL prefix).
+1. [ ] **Search Console** – Property added for `https://taxirabatairoport.com` (or exact URL prefix).
 2. [ ] **URL Inspection** – Test the URL; check "URL is on Google" and "Page fetch" shows full content.
 3. [ ] **No blocking** – Security level **Low** (Hostinger), robots.txt allows, no noindex.
 4. [ ] **Sitemap** – Submitted in Search Console; no errors.
@@ -614,7 +614,7 @@ If the issue persists, check **Search Console → Indexing → Pages**: it will 
 
 ## 🔗 External factors & backlinks
 
-**Backlinks** are links from other websites pointing to your site (e.g. to `https://em-taxi.com`). They are an “external” SEO factor: you cannot create them by changing your own code. Quality tools may report “only a few backlinks” or “only 1 referring domain” — that is expected for a new or small site and improves over time when others link to you.
+**Backlinks** are links from other websites pointing to your site (e.g. to `https://taxirabatairoport.com`). They are an “external” SEO factor: you cannot create them by changing your own code. Quality tools may report “only a few backlinks” or “only 1 referring domain” — that is expected for a new or small site and improves over time when others link to you.
 
 ### Why backlinks matter
 
@@ -629,7 +629,7 @@ If the issue persists, check **Search Console → Indexing → Pages**: it will 
 | **Google Business Profile** | Ensure your [Rabat Transfert Maroc](https://www.google.com/maps/place/EM+Taxi+Maroc) listing has the website URL. Google counts as a referring domain. |
 | **Directories & tourism** | Submit the site to trusted directories: transport/taxi directories, Morocco tourism portals, Rabat/Casablanca/Marrakech business or travel listings. Prefer sites that allow a real link to your homepage. |
 | **Partner & B2B** | Ask hotels, travel agencies, event planners, or corporate clients you work with to add “Transport: Rabat Transfert” with a link on their site (partners page, “services” or “getting here”). |
-| **Press & local** | Local news, “best taxi / chauffeur in Rabat” articles, or event coverage that mention Rabat Transfert and link to em-taxi.com. |
+| **Press & local** | Local news, “best taxi / chauffeur in Rabat” articles, or event coverage that mention Rabat Transfert and link to taxirabatairoport.com. |
 | **Social & review platforms** | Keep the link in your Google Maps listing, and on any Facebook page, TripAdvisor, or other profiles that allow a website field. |
 | **Content others can cite** | Useful, unique content (e.g. “Transferts aéroport Rabat-Salé”, “Transport luxe Maroc”) can attract natural links from blogs or travel sites. |
 
@@ -637,10 +637,10 @@ If the issue persists, check **Search Console → Indexing → Pages**: it will 
 
 Do these first; they don't require code and directly add or encourage backlinks:
 
-1. [ ] **Google Business** — In [Google Business Profile](https://business.google.com) for Rabat Transfert Maroc, set **Website** to `https://em-taxi.com`. Google then counts as a referring domain.
+1. [ ] **Google Business** — In [Google Business Profile](https://business.google.com) for Rabat Transfert Maroc, set **Website** to `https://taxirabatairoport.com`. Google then counts as a referring domain.
 2. [ ] **Facebook / TripAdvisor** — If you have a business page, add the website link in the profile. Each platform that links to you is an extra referring domain.
-3. [ ] **2–3 directories** — Submit `https://em-taxi.com` to 2–3 serious directories (e.g. one taxi/transport directory, one Morocco tourism or "things to do" list). Prefer sites that allow a real link and are relevant.
-4. [ ] **2–3 partners** — Email or call 2–3 hotels, travel agencies, or event partners. Ask for a line like "Transport / Navette : [Rabat Transfert](https://em-taxi.com)" on their "Services", "Partenaires" or "Comment nous rejoindre" page.
+3. [ ] **2–3 directories** — Submit `https://taxirabatairoport.com` to 2–3 serious directories (e.g. one taxi/transport directory, one Morocco tourism or "things to do" list). Prefer sites that allow a real link and are relevant.
+4. [ ] **2–3 partners** — Email or call 2–3 hotels, travel agencies, or event partners. Ask for a line like "Transport / Navette : [Rabat Transfert](https://taxirabatairoport.com)" on their "Services", "Partenaires" or "Comment nous rejoindre" page.
 5. [ ] **Search Console** — In [Google Search Console](https://search.google.com/search-console) → **Links**, check "External links" and "Top linking sites" after a few weeks to see new referring domains.
 
 Domain strength and page strength in tools will improve as more quality sites link to you. You cannot change these metrics from your codebase.

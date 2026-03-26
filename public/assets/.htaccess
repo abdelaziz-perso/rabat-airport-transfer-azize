@@ -3,6 +3,7 @@
   AddType application/javascript .js
   AddType application/javascript .mjs
   AddType text/css .css
+  AddType application/wasm .wasm
 </IfModule>
 <IfModule mod_headers.c>
   <FilesMatch "\.(js|mjs)$">

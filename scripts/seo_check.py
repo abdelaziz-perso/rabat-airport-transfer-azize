@@ -21,7 +21,7 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 # Optimal ranges (SEO best practices)
 TITLE_MIN, TITLE_MAX = 50, 60
 DESC_MIN, DESC_MAX = 150, 160
-CANONICAL_BASE = "http://em-taxi.com"
+CANONICAL_BASE = "https://taxirabatairoport.com"
 
 
 def get_content(path: Path) -> str:
@@ -92,7 +92,7 @@ def check_index_html(root: Path):
     if not meta.get("canonical"):
         errors.append("Missing canonical URL")
     elif not meta["canonical"].startswith("http"):
-        warnings.append("Canonical should be absolute URL (e.g. http://em-taxi.com/)")
+        warnings.append("Canonical should be absolute URL (e.g. https://taxirabatairoport.com/)")
     # Robots
     if not meta.get("robots"):
         warnings.append("Consider adding meta robots (e.g. index, follow)")
@@ -102,10 +102,10 @@ def check_index_html(root: Path):
         if not val:
             warnings.append(f"Missing {label} for social sharing")
         elif val.startswith("/") or not val.startswith("http"):
-            errors.append(f"{label} must be absolute URL (e.g. http://em-taxi.com/logo.png), got: {val[:50]}")
+            errors.append(f"{label} must be absolute URL (e.g. https://taxirabatairoport.com/logo.png), got: {val[:50]}")
     # og:url
     if not meta.get("og_url") or not meta["og_url"].startswith("http"):
-        warnings.append("og:url should be absolute (e.g. http://em-taxi.com/)")
+        warnings.append("og:url should be absolute (e.g. https://taxirabatairoport.com/)")
     return errors, warnings, meta
 
 
@@ -162,7 +162,7 @@ def check_robots(root: Path):
         return errors, warnings
     text = get_content(path)
     if "Sitemap:" not in text and "sitemap" not in text.lower():
-        warnings.append("robots.txt should reference Sitemap (e.g. Sitemap: http://em-taxi.com/sitemap.xml)")
+        warnings.append("robots.txt should reference Sitemap (e.g. Sitemap: https://taxirabatairoport.com/sitemap.xml)")
     if "Allow: /" not in text and "Disallow:" in text:
         warnings.append("Ensure main content is allowed (Allow: /)")
     return errors, warnings
@@ -308,7 +308,7 @@ def main():
     err_str = " ".join(all_errors)
     if "og:image" in err_str and "absolute" in err_str:
         print("\n  QUICK FIX: In index.html set og:image and twitter:image to full URL:")
-        print('    content="http://em-taxi.com/logo.png"')
+        print('    content="https://taxirabatairoport.com/logo.png"')
     sys.exit(0 if s >= 70 else 1)
 
 

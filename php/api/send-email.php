@@ -49,7 +49,7 @@ if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 // Email configuration
 $to = 'em.taxi.maroc@gmail.com';
 $subject = "Nouveau message de contact - EM Taxi Touristique";
-$from = "noreply@em-taxi.com";
+$from = "noreply@taxirabatairoport.com";
 
 // Build email body
 $emailBody = "Nouveau message de contact reçu\n\n";

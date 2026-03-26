@@ -71,7 +71,7 @@ const SEO = () => {
     const structuredData = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        '@id': 'https://em-taxi.com/#organization',
+        '@id': 'https://taxirabatairoport.com/#organization',
         name: 'Rabat Transfert Aéroport',
         alternateName: 'Rabat Transfert',
         description: language === 'en'
@@ -79,7 +79,7 @@ const SEO = () => {
             : language === 'ar'
                 ? 'خدمة نقل فاخر في المغرب منذ 2009. سائق خاص، مرسيدس وبي إم دبليو. نقل المطار، النقل السياحي. الدار البيضاء، مراكش، الرباط. 24/7.'
                 : 'Services de transport de luxe au Maroc depuis 2009. Chauffeur privé, Mercedes & BMW. Transferts aéroport, transport touristique. Casablanca, Marrakech, Rabat. 24/7.',
-        url: 'https://em-taxi.com',
+        url: 'https://taxirabatairoport.com/',
         telephone: '+212674545939',
         email: 'em.taxi.maroc@gmail.com',
         address: {
@@ -107,7 +107,7 @@ const SEO = () => {
             closes: '23:59',
         },
         priceRange: '$$$',
-        image: 'https://em-taxi.com/logo.png',
+        image: 'https://taxirabatairoport.com/logo.png',
         sameAs: [],
         aggregateRating: {
             '@type': 'AggregateRating',

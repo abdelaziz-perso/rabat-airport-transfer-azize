@@ -40,7 +40,7 @@ Run the local SEO checker to get a 0–100 score and fix suggestions (no pip ins
 python3 scripts/seo_check.py
 
 # Also check a live URL (e.g. after deploy)
-python3 scripts/seo_check.py --url http://em-taxi.com
+python3 scripts/seo_check.py --url https://taxirabatairoport.com
 ```
 
 Fixes common issues: title/description length, canonical, og:image absolute URLs, images without alt, H1 count, robots.txt, sitemap. See `SEO_GUIDELINES.md` for full SEO practices.
