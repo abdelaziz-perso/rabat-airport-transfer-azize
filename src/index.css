@@ -34,6 +34,13 @@
 
 
 
+html,
+body,
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -44,7 +51,6 @@ body {
   min-height: 100vh;
   background-color: var(--color-white);
   color: var(--color-dark);
-  overflow-x: hidden;
 }
 
 /* Visually hidden H1 for crawlers (SPA) - present in initial HTML */
