@@ -68,7 +68,7 @@ const WelcomeAssistant = () => {
 
                 <div className="assistant-header">
                     <div className="assistant-avatar">
-                        <img src={chauffeurAvatar} alt="EM Assistant - Assistant virtuel Rabat Transfert Aéroport" width="48" height="48" loading="lazy" />
+                        <img src={chauffeurAvatar} alt="Assistant virtuel Rabat Transfert Aéroport" width="48" height="48" loading="lazy" />
                         <span className="online-indicator" aria-label="En ligne"></span>
                     </div>
                     <div className="assistant-info">

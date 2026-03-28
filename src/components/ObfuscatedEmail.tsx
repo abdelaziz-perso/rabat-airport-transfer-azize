@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-/** Base64 for em.taxi.maroc@gmail.com - use this prop to avoid plaintext in source */
-export const CONTACT_EMAIL_ENCODED = 'ZW0udGF4aS5tYXJvY0BnbWFpbC5jb20=';
+/** Base64 for taxirabatairoport@gmail.com - use this prop to avoid plaintext in source */
+export const CONTACT_EMAIL_ENCODED = 'dGF4aXJhYmF0YWlycG9ydEBnbWFpbC5jb20=';
 
 /**
  * Renders an email link. The address is passed base64-encoded so it does not
