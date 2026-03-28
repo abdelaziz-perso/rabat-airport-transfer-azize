@@ -19,14 +19,24 @@ const translations = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-    const [language, setLanguageState] = useState<Language>(() => {
+function readStoredLanguage(): Language | null {
+    try {
         const saved = localStorage.getItem('language') as Language;
-        return saved && ['fr', 'en', 'ar'].includes(saved) ? saved : 'fr';
-    });
+        return saved && ['fr', 'en', 'ar'].includes(saved) ? saved : null;
+    } catch {
+        return null;
+    }
+}
+
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+    const [language, setLanguageState] = useState<Language>(() => readStoredLanguage() ?? 'fr');
 
     useEffect(() => {
-        localStorage.setItem('language', language);
+        try {
+            localStorage.setItem('language', language);
+        } catch {
+            /* Safari private mode / storage disabled */
+        }
         document.documentElement.lang = language;
         document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
     }, [language]);

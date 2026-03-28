@@ -17,7 +17,8 @@ export default defineConfig({
     },
     cssCodeSplit: true,
     minify: 'esbuild',
-    target: 'esnext',
+    // Broader than esnext so older iOS Safari can parse the bundle (esnext can emit unsupported syntax).
+    target: ['es2020', 'safari14'],
     reportCompressedSize: true,
   },
 })

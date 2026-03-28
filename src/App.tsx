@@ -39,11 +39,18 @@ function App() {
         });
       });
     };
+    const scheduleIdle = (fn: () => void) => {
+      if (typeof window !== 'undefined' && typeof window.requestIdleCallback === 'function') {
+        window.requestIdleCallback(fn, { timeout: 3000 });
+      } else {
+        setTimeout(fn, 500);
+      }
+    };
     if (document.readyState === 'complete') {
-      requestIdleCallback ? requestIdleCallback(initAOS, { timeout: 3000 }) : setTimeout(initAOS, 500);
+      scheduleIdle(initAOS);
     } else {
       const onLoad = () => {
-        requestIdleCallback ? requestIdleCallback(initAOS, { timeout: 3000 }) : setTimeout(initAOS, 500);
+        scheduleIdle(initAOS);
       };
       window.addEventListener('load', onLoad, { once: true });
     }

@@ -3,8 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Hero poster uses bundled logo from src (Vite); avoid /logo.png preload (must exist at site root on server). -->
   <!-- Preconnect to GA so when it loads (deferred) it's faster; improves Desktop PageSpeed -->
@@ -118,8 +121,11 @@
       gtag('js', new Date());
       gtag('config', 'G-XXXXXXXXXX');
     }
-    if (requestIdleCallback) requestIdleCallback(loadGA, { timeout: 2000 });
-    else window.addEventListener('load', function () { setTimeout(loadGA, 1); });
+    if (typeof window.requestIdleCallback === 'function') {
+      window.requestIdleCallback(loadGA, { timeout: 2000 });
+    } else {
+      window.addEventListener('load', function () { setTimeout(loadGA, 1); });
+    }
   </script>
 
   <!-- Fonts: load async to avoid render-blocking (saves ~1.6s) -->
